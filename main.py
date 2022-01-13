@@ -1,16 +1,16 @@
-# This is a sample Python script.
+import random
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def Game():
+    r_num = int(random.randint(0, 100))
+    print("I have a number between 0 and 100, when you guess it you win.")
+    print(r_num)
+    guess = input("What number do you think that I am thinking of? \n ")
+    guess = int(guess)
+    if guess ==  r_num:
+        print("Good job that was first try!")
+    if guess > r_num:
+        print("Sorry not yet, try guessing a little lower")
+    else:
+        print("Sorry not yet, try guessing a little higher")
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+Game()
